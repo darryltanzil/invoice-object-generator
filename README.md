@@ -23,7 +23,7 @@ contractors to allow greater organization, both for myself,
 and others.
 
 ## User Stories
-* As a user, I want to be able to input the hours I've worked, and my hourly wage.
-* As a user, I want to be able to generate a PDF that represents my salary.
-* As a user, I want to be able to download this PDF.
-* As a user, I want to be able to add a **Time Entry** to an **Invoice**. 
+* As a user, I want to be able to add Invoice Line items to an Invoice.
+* As a user, I want to be able to input the hours I've worked, and my hourly wage into my Invoice Line Items.
+* As a user, I want to be able to view a list of my invoices.
+* As a user, I want to be able to see what Invoice Line Items are added to a specific invoice. 
