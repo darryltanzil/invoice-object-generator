@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class Invoice {
 
     private ArrayList<InvoiceLineItem> invoiceItems; // invoice items
-    private String name;
 
-    public Invoice(String name) {
-        this.name = name;
+    public Invoice() {
     }
 
-    public String getName() {
-        return name;
+    public void attachLineItem(String desc, double hours, double rate) {
+        invoiceItems.add(new InvoiceLineItem(desc, hours, rate));
     }
+
+
 }

@@ -14,12 +14,19 @@ public class TerminalUI {
         invoiceGeneratorApp = new App();
     }
 
+    @SuppressWarnings("methodlength")
     public void init(Scanner sc) {
         System.out.println("What would you like to do?");
-
         while (true) {
             String initStatement = sc.next();
             switch (initStatement) {
+                case "list":
+                case "list invoices":
+                    System.out.println("Here is a list of invoices to generate:");
+                    for (String invoiceNames : invoiceGeneratorApp.getInvoices().keySet()) {
+                        System.out.println(invoiceNames);
+                    }
+                    break;
                 case "add":
                     String invoiceName = sc.nextLine();
                     invoiceGeneratorApp.generateInvoice(invoiceName);
