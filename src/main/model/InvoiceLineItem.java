@@ -2,8 +2,12 @@ package model;
 
 import com.sun.org.apache.xpath.internal.operations.Bool;
 
-// InvoiceLineItem represents specific items within invoice
-// It includes a description of the task, how many hours you've worked on that task, and the rate you charge at.
+/**
+ * The InvoiceLineItem class
+ * represents specific items within an invoice.r
+ * It includes a description of the task, how many hours you've worked on that task, and the rate you charge at.
+ */
+
 public class InvoiceLineItem {
     private double hours;
     private String desc;
@@ -17,16 +21,19 @@ public class InvoiceLineItem {
         this.desc = desc;
     }
 
-    public void setDesc(String value) {
+    public Boolean setDesc(String value) {
         desc = value;
+        return true;
     }
 
-    public void setHours(double value) {
+    public Boolean setHours(double value) {
         hours = value;
+        return true;
     }
 
-    public void setRate(double value) {
+    public Boolean setRate(double value) {
         rate = value;
+        return true;
     }
 
     public double getHours() {
