@@ -19,8 +19,8 @@ public class TestInvoiceLineItem {
         assertTrue(testIli.setDesc("test"));
         assertEquals("test" ,testIli.getDesc());
         assertTrue(testIli.setHours(2));
-        assertEquals(2 ,testIli.getDesc());
+        assertEquals(2 ,testIli.getHours());
         assertTrue(testIli.setRate(19.25));
-        assertEquals(19.25, testIli.getDesc());
+        assertEquals(19.25, testIli.getRate());
     }
 }

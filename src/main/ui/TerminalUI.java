@@ -24,11 +24,10 @@ public class TerminalUI {
         System.out.println("What would you like to do?");
         while (true) {
             String statement = sc.next();
-
             switch (statement) {
                 case "list":
                 case "list invoices":
-                    System.out.println("Here is a list of invoices to generate:");
+                    System.out.println("Here is a list of invoices generated:");
                     for (String invoiceNames : invoiceGeneratorApp.getInvoices().keySet()) {
                         System.out.println(invoiceNames);
                     }
