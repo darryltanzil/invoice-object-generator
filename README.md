@@ -27,3 +27,5 @@ and others.
 * As a user, I want to be able to input the hours I've worked, and my hourly wage into my Invoice Line Items.
 * As a user, I want to be able to view a list of my invoices.
 * As a user, I want to be able to see what Invoice Line Items are added to a specific invoice. 
+* As a user, I want to be able to save my invoices
+* As a user, I want to be able to load my invoices from a file
