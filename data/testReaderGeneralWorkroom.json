@@ -1,7 +1,11 @@
 {
-    "invoices": {
-        "Invoice 1": {"invoiceLineItems": []},
-        "Invoice 2": {"invoiceLineItems": []}
-    },
-    "name": "Invoice Generator"
+  "invoices": {
+    " i": {"invoiceLineItems": [{
+      "hours": 19.25,
+      "rate": 28.5,
+      "desc": "description"
+    }]},
+    " b": {"invoiceLineItems": []}
+  },
+  "name": "Invoice Generator"
 }
