@@ -1,5 +1,8 @@
 package model;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+import persistence.Writable;
 import java.util.HashMap;
 
 /**
@@ -11,9 +14,11 @@ import java.util.HashMap;
 public class App {
 
     private HashMap<String, Invoice> invoices;
+    private String name;
 
-    public App() {
+    public App(String name) {
         this.invoices = new HashMap<String, Invoice>();
+        this.name = name;
     }
 
     // REQUIRES: the name parameter must not equal a key in the invoices hashmap
@@ -56,4 +61,19 @@ public class App {
         return invoices;
     }
 
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("name", name);
+        json.put("invoices", invoicesToJson());
+        return json;
+    }
+
+    // EFFECTS: returns things in this workroom as a JSON array
+    private JSONObject invoicesToJson() {
+        return new JSONObject(invoices);
+    }
+
+    public String getName() {
+        return name;
+    }
 }
