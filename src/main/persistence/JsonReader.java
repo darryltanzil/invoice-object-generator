@@ -74,7 +74,6 @@ public class JsonReader {
             }
 
             app.getInvoices().put(keyStr, invoice);
-
         });
     }
 }

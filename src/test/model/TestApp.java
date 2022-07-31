@@ -10,7 +10,7 @@ public class TestApp {
 
     @BeforeEach
     void runBefore() {
-        testApp = new App();
+        testApp = new App("Invoice Generator");
     }
 
     @Test

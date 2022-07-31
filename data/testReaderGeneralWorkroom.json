@@ -1,0 +1,7 @@
+{
+    "invoices": {
+        "Invoice 1": {"invoiceLineItems": []},
+        "Invoice 2": {"invoiceLineItems": []}
+    },
+    "name": "Invoice Generator"
+}

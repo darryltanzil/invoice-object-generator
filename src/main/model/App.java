@@ -76,4 +76,9 @@ public class App {
     public String getName() {
         return name;
     }
+
+    // EFFECTS: returns the number of invoices.
+    public int numInvoices() {
+        return invoices.size();
+    }
 }
