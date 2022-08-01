@@ -3,6 +3,7 @@ package persistence;
 import model.App;
 import model.Invoice;
 import model.InvoiceLineItem;
+import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -43,6 +44,7 @@ class JsonReaderTest {
         try {
             App app = reader.read();
             assertEquals("Invoice Generator", app.getName());
+            //assertEquals("", reader.addInvoices(app, new JSONObject()));
             HashMap<String, Invoice> invoices = app.getInvoices();
             assertEquals(2, invoices.size());
         } catch (IOException e) {

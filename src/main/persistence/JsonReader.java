@@ -58,19 +58,18 @@ public class JsonReader {
 
     // MODIFIES: app
     // EFFECTS: parses thingies from JSON object and adds them to app
-    private void addInvoices(App app, JSONObject jsonObject) {
+    public void addInvoices(App app, JSONObject jsonObject) {
         JSONObject invoicesFromLoadedFile = jsonObject.getJSONObject("invoices");
         invoicesFromLoadedFile.keySet().forEach(keyStr -> {
             Invoice invoice = new Invoice();
             JSONArray invoiceLineItems = invoicesFromLoadedFile.getJSONObject(keyStr).getJSONArray("invoiceLineItems");
             System.out.println("name: " + keyStr + " value: " + invoiceLineItems);
 
-            if (invoiceLineItems.length() > 0) {
-                for (int i = 0; i < invoiceLineItems.length(); i++) {
-                    JSONObject currentObj = invoiceLineItems.getJSONObject(i);
-                    invoice.attachLineItem(new InvoiceLineItem(currentObj.getString("desc"),
-                            currentObj.getInt("hours"), currentObj.getInt("rate")));
-                }
+            for (int i = 0; i < invoiceLineItems.length(); i++) {
+                JSONObject currentObj = invoiceLineItems.getJSONObject(i);
+                invoice.attachLineItem(new InvoiceLineItem(currentObj.getString("desc"),
+                        currentObj.getInt("hours"), currentObj.getInt("rate")));
+                System.out.print("added invoice line item!");
             }
 
             app.getInvoices().put(keyStr, invoice);
