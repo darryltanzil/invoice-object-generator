@@ -28,7 +28,7 @@ class JsonReaderTest {
 
     @Test
     void testReaderEmptyWorkRoom() {
-        JsonReader reader = new JsonReader("./data/testReaderEmptyWorkRoom.json");
+        JsonReader reader = new JsonReader("./data/testReaderEmptyApp.json");
         try {
             App app = reader.read();
             assertEquals("Invoice Generator", app.getName());
@@ -40,13 +40,13 @@ class JsonReaderTest {
 
     @Test
     void testReaderGeneralWorkRoom() {
-        JsonReader reader = new JsonReader("./data/testReaderGeneralWorkRoom.json");
+        JsonReader reader = new JsonReader("./data/testReaderGeneralApp.json");
         try {
             App app = reader.read();
             assertEquals("Invoice Generator", app.getName());
-            //assertEquals("", reader.addInvoices(app, new JSONObject()));
             HashMap<String, Invoice> invoices = app.getInvoices();
             assertEquals(2, invoices.size());
+            assertEquals(1, invoices.get(" i").getInvoiceLineItems().size());
         } catch (IOException e) {
             fail("Couldn't read from file");
         }

@@ -32,12 +32,12 @@ class JsonWriterTest {
     void testWriterEmptyWorkroom() {
         try {
             App app = new App("Invoice Generator");
-            JsonWriter writer = new JsonWriter("./data/testWriterEmptyWorkroom.json");
+            JsonWriter writer = new JsonWriter("./data/testWriterEmptyApp.json");
             writer.open();
             writer.write(app);
             writer.close();
 
-            JsonReader reader = new JsonReader("./data/testWriterEmptyWorkroom.json");
+            JsonReader reader = new JsonReader("./data/testWriterEmptyApp.json");
             app = reader.read();
             assertEquals("Invoice Generator", app.getName());
             assertEquals(0, app.numInvoices());
@@ -52,12 +52,12 @@ class JsonWriterTest {
             App app = new App("Invoice Generator");
             app.generateInvoice("Invoice 1");
             app.generateInvoice("Invoice 2");
-            JsonWriter writer = new JsonWriter("./data/testWriterGeneralWorkroom.json");
+            JsonWriter writer = new JsonWriter("./data/testWriterGeneralApp.json");
             writer.open();
             writer.write(app);
             writer.close();
 
-            JsonReader reader = new JsonReader("./data/testWriterGeneralWorkroom.json");
+            JsonReader reader = new JsonReader("./data/testWriterGeneralApp.json");
             app = reader.read();
             assertEquals("Invoice Generator", app.getName());
             HashMap<String, Invoice> invoices = app.getInvoices();
