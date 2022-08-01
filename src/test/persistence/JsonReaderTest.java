@@ -13,6 +13,9 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
+//  This test was originally forked from https://github.students.cs.ubc.ca/CPSC210/JsonSerializationDemo.git
+//  and modified to fit the needs of this project.
+
 class JsonReaderTest {
 
     @Test
