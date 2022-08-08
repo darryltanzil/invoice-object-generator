@@ -29,3 +29,18 @@ and others.
 * As a user, I want to be able to see what Invoice Line Items are added to a specific invoice. 
 * As a user, I want to be able to save my invoices
 * As a user, I want to be able to load my invoices from a file
+
+## Instructions for Grader
+* To add an invoice, select the "Add Invoice" button and enter the name. You can do this multiple times.
+* **You can generate the first required event** by selecting the "Add Invoice Line Item" button.
+Make sure to input a number for the hour and description; otherwise, it will produce an error message.
+* To view the panel of invoices, you can click the "view invoices" button. 
+This will allow you to view the invoices in the current save file.
+* **You can generate the second required event** by clicking the "view invoice line items" button.
+  This is differentiated from "View Invoices" since Invoice Line Items are a subchild of the invoice parent;
+  by being able to view these invoice line items, which are a subset of a specific invoice, the program
+  filters a user created class by another user created parent class.
+* **You can locate my visual component** in the main screen of the invoice generator. It shows a save icon, 
+in order to represent invoices that companies and contractors may load and save.
+* **You can save the state of my application by** selecting the "Save Current Invoices" button.
+* **You can reload the state of my application** by selecting the "Load from Previous Save" button.

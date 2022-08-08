@@ -1,11 +1,12 @@
 {
     "invoices": {
-        " i": {"invoiceLineItems": [{
+        "test1": {"invoiceLineItems": []},
+        "test2": {"invoiceLineItems": [{
             "hours": 19.25,
-            "rate": 28.5,
-            "desc": "description"
+            "rate": 2,
+            "desc": "Testing"
         }]},
-        " b": {"invoiceLineItems": []}
+        "test3": {"invoiceLineItems": []}
     },
     "name": "Invoice Generator"
 }

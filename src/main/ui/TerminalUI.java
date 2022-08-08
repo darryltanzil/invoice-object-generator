@@ -4,10 +4,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Scanner;
 import model.InvoiceLineItem;
-import model.Invoice;
 import model.App;
 import persistence.JsonReader;
 import persistence.JsonWriter;
+
 
 /**
  * The TerminalUI class
@@ -27,8 +27,12 @@ public class TerminalUI {
         jsonReader = new JsonReader(JSON_STORE);
     }
 
+    public App getApp() {
+        return invoiceGeneratorApp;
+    }
+
     // EFFECTS: saves the workroom to file
-    private void saveApp() {
+    public void saveApp() {
         try {
             jsonWriter.open();
             jsonWriter.write(invoiceGeneratorApp);
@@ -41,7 +45,7 @@ public class TerminalUI {
 
     // MODIFIES: this
     // EFFECTS: loads workroom from file
-    private void loadApp() {
+    public void loadApp() {
         try {
             invoiceGeneratorApp = jsonReader.read();
             System.out.println("Loaded " + invoiceGeneratorApp.getName() + " from " + JSON_STORE);
