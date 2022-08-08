@@ -13,9 +13,11 @@ import java.util.ArrayList;
 
 public class Invoice {
     private ArrayList<InvoiceLineItem> invoiceItems; // invoice items
+    private App app;
 
-    public Invoice() {
+    public Invoice(App app) {
         invoiceItems = new ArrayList<InvoiceLineItem>();
+        this.app = app;
     }
 
     // MODIFIES: this, InvoiceLineItem
@@ -26,6 +28,7 @@ public class Invoice {
     }
 
     public ArrayList<InvoiceLineItem> getInvoiceLineItems() {
+        app.getEventLog().logEvent(new Event("Getting invoice line items to be viewed."));
         return invoiceItems;
     }
 }

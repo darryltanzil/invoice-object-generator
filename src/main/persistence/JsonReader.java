@@ -2,6 +2,7 @@ package persistence;
 
 import model.App;
 
+import model.EventLog;
 import model.Invoice;
 import model.InvoiceLineItem;
 import org.json.JSONArray;
@@ -61,7 +62,7 @@ public class JsonReader {
     public void addInvoices(App app, JSONObject jsonObject) {
         JSONObject invoicesFromLoadedFile = jsonObject.getJSONObject("invoices");
         invoicesFromLoadedFile.keySet().forEach(keyStr -> {
-            Invoice invoice = new Invoice();
+            Invoice invoice = new Invoice(app);
             JSONArray invoiceLineItems = invoicesFromLoadedFile.getJSONObject(keyStr).getJSONArray("invoiceLineItems");
             System.out.println("name: " + keyStr + " value: " + invoiceLineItems);
 

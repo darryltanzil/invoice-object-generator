@@ -1,15 +1,16 @@
 package ui;
 
+import model.Event;
+import model.EventLog;
 import model.Invoice;
 import model.InvoiceLineItem;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
+import java.awt.event.*;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 import static javax.swing.JOptionPane.showMessageDialog;
 
@@ -21,10 +22,11 @@ public class SwingUI {
     private JFrame frame;
     private JTable table;
     private TerminalUI terminalUI;
+    private EventLog eventLog;
 
+    @SuppressWarnings("methodlength")
     public SwingUI(TerminalUI terminalUI) {
         this.terminalUI = terminalUI;
-
         frame = new JFrame("Invoice Generator V1");
         frame.getContentPane().setBackground(Color.white);
         setButtons();
@@ -43,7 +45,14 @@ public class SwingUI {
         frame.setSize(400, 700);
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                for (Iterator<model.Event> it = terminalUI.getApp().getEventLog().iterator(); it.hasNext(); ) {
+                    Event event = it.next();
+                    System.out.println("EVENT DESC: " + event.getDescription() + " | DATE: " + event.getDate());
+                }
+            }
+        });
     }
 
     // EFFECTS: Sets up the buttons for add invoices and invoice line items

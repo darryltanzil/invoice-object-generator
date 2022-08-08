@@ -11,14 +11,16 @@ import java.util.HashMap;
  * It is a handler for the entire program.
  */
 
-public class App {
+public class App implements Writable {
 
     private HashMap<String, Invoice> invoices;
     private String name;
+    private EventLog eventLog;
 
     public App(String name) {
         this.invoices = new HashMap<String, Invoice>();
         this.name = name;
+        eventLog = EventLog.getInstance();
     }
 
     // REQUIRES: the name parameter must not equal a key in the invoices hashmap
@@ -30,8 +32,9 @@ public class App {
             System.out.println("Consider renaming your new one, or deleting your old one first.");
             return false;
         } else {
-            invoices.put(invoiceName, new Invoice());
+            invoices.put(invoiceName, new Invoice(this));
             System.out.println("A new invoice has been generated named " + invoiceName);
+            eventLog.logEvent(new Event("Invoice " + invoiceName + " generated."));
             return true;
         }
     }
@@ -80,5 +83,9 @@ public class App {
     // EFFECTS: returns the number of invoices.
     public int numInvoices() {
         return invoices.size();
+    }
+
+    public EventLog getEventLog() {
+        return eventLog;
     }
 }

@@ -4,7 +4,7 @@ import com.sun.org.apache.xpath.internal.operations.Bool;
 
 /**
  * The InvoiceLineItem class
- * represents specific items within an invoice.r
+ * represents specific items within an invoice.
  * It includes a description of the task, how many hours you've worked on that task, and the rate you charge at.
  */
 
