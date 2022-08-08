@@ -31,8 +31,8 @@ and others.
 * As a user, I want to be able to load my invoices from a file
 
 ## Instructions for Grader
-* To add an invoice, select the "Add Invoice" button and enter the name. You can do this multiple times.
-* **You can generate the first required event** by selecting the "Add Invoice Line Item" button.
+* **You can generate the first required event** by selecting the "Add Invoice" button and entering the name. You can do this multiple times.
+* You can add invoice line items by selecting the "Add Invoice Line Item" button.
 Make sure to input a number for the hour and description; otherwise, it will produce an error message.
 * To view the panel of invoices, you can click the "view invoices" button. 
 This will allow you to view the invoices in the current save file.
