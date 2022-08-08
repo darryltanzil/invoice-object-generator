@@ -118,8 +118,7 @@ public class SwingUI {
         });
     }
 
-    // https://stackoverflow.com/a/5255930/230513
-
+    // Reference from https://stackoverflow.com/a/5255930/230513
     // MODIFIES: f
     // EFFECTS: button listener for viewing invoices
     private void seeInvoicesListener(JButton seeInv) {
@@ -176,7 +175,7 @@ public class SwingUI {
         });
     }
 
-    // EFFECTS: Invoice Line Item viewer
+    // EFFECTS: Invoice Line Item viewer, is a listener for viewing Invoice Line Items
     @SuppressWarnings("methodlength")
     private void viewInvoiceLineItem(JButton addInvoice) {
         addInvoice.addActionListener(new ActionListener() {
@@ -226,6 +225,7 @@ public class SwingUI {
         });
     }
 
+    // EFFECTS: Invoice Line Item Listener for the add Invoice Line Items button
     @SuppressWarnings("methodlength")
     private void addIliListener(JButton addInvoice) {
         addInvoice.addActionListener(new ActionListener() {
