@@ -13,7 +13,7 @@ class TestInvoice {
 
     @BeforeEach
     void runBefore() {
-        testInvoice = new Invoice();
+        testInvoice = new Invoice(new App("Invoice Generator App"));
         testIli = new InvoiceLineItem("test description", 2, 19.25);
     }
 
