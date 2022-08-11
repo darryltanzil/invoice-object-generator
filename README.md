@@ -44,3 +44,21 @@ This will allow you to view the invoices in the current save file.
 in order to represent invoices that companies and contractors may load and save.
 * **You can save the state of my application by** selecting the "Save Current Invoices" button.
 * **You can reload the state of my application** by selecting the "Load from Previous Save" button.
+
+## Phase 4: Task 2
+This log will appear, printing out all Events that occur in the application. It will show up after program close.
+```
+EVENT DESC: Invoice test generated. | DATE: Wed Aug 10 21:13:01 PDT 2022
+EVENT DESC: Getting invoice line items to be viewed. | DATE: Wed Aug 10 21:13:05 PDT 2022
+EVENT DESC: Invoice test 2  generated. | DATE: Wed Aug 10 21:13:11 PDT 2022
+EVENT DESC: Invoice test3 generated. | DATE: Wed Aug 10 21:13:22 PDT 2022
+EVENT DESC: Getting invoice line items to be viewed. | DATE: Wed Aug 10 21:13:25 PDT 2022
+```
+If the log does not appear, it is because no invoice has been generated, or no invoice line item has been viewed.
+Note that the event log viewing occurs for **invoice line items**, not **invoices**.
+## Phase 4: Task 3
+
+* Would have re-factored to have SwingUI connected directly to the App, so it is not so reliant  on the terminal UI
+* Removed the Writeable interface, since that was just a leftover from a template of an example
+* Perhaps had InvoiceLineItems connect to App directly and have it connected to the Invoice object via Hashmap? 
+This could have potentially reduced the amount of connections
