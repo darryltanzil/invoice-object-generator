@@ -1,4 +1,4 @@
-    # My Personal Project
+## 210 Personal Project
 
 ## What will the Application do?
 The application will be an invoice generator which takes in
@@ -30,7 +30,7 @@ and others.
 * As a user, I want to be able to save my invoices
 * As a user, I want to be able to load my invoices from a file
 
-## Instructions for Grader
+## Instructions for Usage
 * **You can generate the first required event** by selecting the "Add Invoice" button and entering the name. You can do this multiple times.
 * You can add invoice line items by selecting the "Add Invoice Line Item" button.
 Make sure to input a number for the hour and description; otherwise, it will produce an error message.
