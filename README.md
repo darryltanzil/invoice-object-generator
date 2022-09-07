@@ -1,4 +1,4 @@
-## 210 Personal Project
+# 210 Personal Project
 
 ## What will the Application do?
 The application will be an invoice generator which takes in
