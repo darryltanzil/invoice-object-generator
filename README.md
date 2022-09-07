@@ -1,4 +1,4 @@
-# 210 Personal Project
+# Invoice Generator App
 
 ## What will the Application do?
 The application will be an invoice generator which takes in
@@ -7,7 +7,7 @@ printable in *PDF* form. The core functionality will allow them to edit the data
 which will be *JSON* represented in a *GUI* format. The user will then be able to export
 as a *PDF* afterwards.
 
-## Who will use it?
+## Who can use it?
 **Contractors** can use this application, giving them an easy
 way to keep track of their finances. As well as this, **small businesses, accountants,
 and anyone looking for an easy way to generate their invoices** will be able to use it
