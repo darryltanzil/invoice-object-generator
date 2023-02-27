@@ -30,6 +30,8 @@ and others.
 * As a user, I want to be able to save my invoices
 * As a user, I want to be able to load my invoices from a file
 
+![image](https://user-images.githubusercontent.com/5387769/221457511-9058edcf-77f2-4d78-a43a-833807419dd0.png)
+
 ## Instructions for Usage
 * **You can generate the first required event** by selecting the "Add Invoice" button and entering the name. You can do this multiple times.
 * You can add invoice line items by selecting the "Add Invoice Line Item" button.
