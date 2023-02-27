@@ -13,7 +13,7 @@ way to keep track of their finances. As well as this, **small businesses, accoun
 and anyone looking for an easy way to generate their invoices** will be able to use it
 as well. 
 
-## Why is this project of interest to you?
+## Why is this project of interest to others?
 As a tech contractor myself, I struggle a lot with keeping
 my invoices in check; my current workflow includes using
 an invoice generator online. Although it works, it is
